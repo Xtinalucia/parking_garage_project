@@ -1,31 +1,61 @@
 class Garage():
-
-    tickets = []
-    parkingSpaces = []
-    currentTicket = {}
-
-    def __init__(self, ticket=25, parking=25):
-        self.ticket = ticket
-        self.parking = parking
-
+#garage has 10 tickets/parking spaces
+    def __init__(self):
+        self.tickets =[]
+        self.parkingSpaces = []
+        self.currentTicket = {}
+        
     def takeTicket(self):
-        self.ticket -=1
-        print(f'There are {self.ticket} tickets left')
-        self.parking -=1
-        print(f'There are {self.parking} parking spaces left')
-
+      #remove ticket /parking here  
+        ticketnumber = 0
+        totaltickets = self.tickets.append(ticketnumber + 1)
+        print(totaltickets)    
+        
+        #self.parking -=1
+        #print(f'There are {self.parking} parking spaces left')
+        #self.currentTicket["ticket 1"] = "False"
+        
     def payForParking(self):
          amount = int(input("Pay amount here! "))
          if amount !=0:
             print('Your ticket has been paid, and you have 15 minutes to leave!')
          else:
             print('Don\'t be a cheapskate, pay your ticket bro!')
+    #Update the "currentticket" dict key "paid" to True
+    
+    #def leaveGarage(self):  
+        #Validate ticket - paid/unpaid
+        #print('Ticket number please?')
+        #if self.ticket = # valid ticket# thats paid:
+        #print('Thank you, have a nice day!')
+        #if self.ticket = #upaid:
+        #input("Provide a valid ticket or Pay.")
+        #Loop back to prev print statement
+
+        #self.ticket +=1
+        #self.parking +=1
+    
+#class Tickets():
+
+   # def __init__(self, ticketnum):
+        #self.ticketnum = ticketnum
+        
+#class PkSpots():
+        
+    #def __init__(self, avalspots):
+        #self.avalspots = avalspots
+
+
+
+ 
 
 test = Garage()
 test.takeTicket()
-test.payForParking()
+#test.payForParking()
+                
 
-#     def leaveGarage(self):
+
+    
 #         pass   
 
 # def add(self):
