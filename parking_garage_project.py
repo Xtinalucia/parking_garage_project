@@ -2,7 +2,7 @@ from typing import Counter
 
 
 class Garage():
-    NextTicketNumber = 1
+    NextTicketNumber = 0
 
     def __init__(self):
         self.tickets = []
@@ -30,7 +30,7 @@ class Garage():
              if i.ticketnum == ticketId:
                  ticketFound = True
                  amount = int(input("Pay amount here! "))
-                 if amount !=0:
+                 if amount != 0:
                     i.paid = True
                     print('Your ticket has been paid, and you have 15 minutes to leave!')
                  else:
@@ -43,10 +43,10 @@ class Garage():
          ticketFound = False
          for i in self.tickets:
              if i.ticketnum == ticketId:
-                  self.spots += 1
                   ticketFound = True
+                  self.spots += 1
                   if i.paid == True:
-                    print('Have a nice day')
+                    print('Have a nice day [Gate Opens]')
                   else:
                     print('This ticket is unpaid, please pay at ticket machine')
          if not ticketFound:
