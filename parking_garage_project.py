@@ -2,7 +2,7 @@ from typing import Counter
 
 
 class Garage():
-    NextTicketNumber =0
+    NextTicketNumber = 1
 
     def __init__(self):
         self.tickets = []
@@ -49,7 +49,8 @@ class Garage():
                     print('Have a nice day')
                   else:
                     print('This ticket is unpaid, please pay at ticket machine')
-
+         if not ticketFound:
+             print('The ticket number was not found')
         
 class Ticket():
 
@@ -60,9 +61,8 @@ class Ticket():
 
 
 def run():
-    GarageObj = Garage()
-    quit = False
-    while not quit:
+    garageOne = Garage()
+    while True:
         print('Hello Customer!')
         print('')
         print('1 - Get ticket')
@@ -70,15 +70,15 @@ def run():
         print('3 - Leave garage')
         print('4 - Quit')
         print('')
-        option  = int(input('Please select'))
+        option  = int(input('Please select: '))
         if option == 1:
-            GarageObj.takeTicket()
-        elif option ==2:
-           GarageObj.payForParking()
-        elif option ==3:
-            GarageObj.leaveGarage()
-        elif option ==4:
-            quit = True
+            garageOne.takeTicket()
+        elif option == 2:
+           garageOne.payForParking()
+        elif option == 3:
+            garageOne.leaveGarage()
+        elif option == 4:
+            break
 
 run()
 
